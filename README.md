@@ -28,3 +28,6 @@ providers: [
       {provide: ErrorHandler, useClass: GlobalErrorHandler}
     ],
 ```
+# More details
+Description of the project in more details published on 
+https://www.codeproject.com/Articles/5255510/Analysis-Service-MDX-Query-Viewer-web-client
