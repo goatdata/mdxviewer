@@ -1,0 +1,37 @@
+<div class="conainer" style="width:100%;height: 100vh;">
+
+    <div class="row p-0 m-0" style="height:30%; width:100%; position: relative;">
+        <div ace-editor #editor
+            [(text)]="query"
+            [mode]="'mdx'"
+            [theme]="'mdx'"
+            [options]="options"
+            [readOnly]="false"  
+            style="min-height: 200px; width:100%; overflow: auto;"            
+        ></div>
+        <div class="execute_button bottomright">
+
+            <button *ngIf="!IsExecuting" type="button" class="btn btn-outline-primary" style="border-radius:50px;" (click)="Execute()">
+                <i class="fas fa-play" style="font-size: 1.3em;"></i>
+            </button>
+
+            <button *ngIf="IsExecuting" type="button" class="btn btn-outline-info" style="border-radius:50px;" (click)="Cancel()">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>                   
+            </button>
+         </div>
+    </div>
+    <div class="row p-0 m-0" style="height: 70%;width: 100%;position: fixed;">
+        <ag-grid-angular
+            #agGrid 
+            style="width: 100%; height: 100%;" 
+            class="ag-theme-balham"
+            [rowData]="rowData" 
+            [columnDefs]="columnDefs"
+            [frameworkComponents]="frameworkComponents"
+            [defaultColDef]="defaultColDef"
+            (gridReady)="onGridReady($event)"      
+            [suppressRowTransform]="true">
+        </ag-grid-angular>
+    </div>
+    
+</div>

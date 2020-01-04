@@ -1,0 +1,8 @@
+.vs/
+packages/
+App_Data/
+bin/
+obj/
+node_modules/
+.vscode/
+dist/

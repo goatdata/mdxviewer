@@ -1,0 +1,34 @@
+::ng-deep {
+    .rowheader{
+        border-bottom-style: none !important; 
+    }
+
+    .groupEmptyHeader{
+        border-width: 0px !important; 
+        border-top-style: none !important;
+    }
+    
+    .measureheader{
+        font-size: 0.8em;
+        font-weight: 500;
+        padding-left: 0px;
+    }
+    
+    .cellSpanned{
+        background: #ffffff;
+    }
+    
+    .bottomright {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+   }
+   
+   .execute_button {
+        margin: 20px;    
+   }
+   
+} 
+
+
+
